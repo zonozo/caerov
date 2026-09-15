@@ -1,0 +1,18 @@
+{
+  "name": "@caerov/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.3.0",
+    "typescript-eslint": "^8.41.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0"
+  }
+}

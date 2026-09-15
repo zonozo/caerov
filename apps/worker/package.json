@@ -1,0 +1,31 @@
+{
+  "name": "@caerov/worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx watch --clear-screen=false src/main.ts",
+    "start": "node dist/main.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@caerov/config": "workspace:*",
+    "@caerov/db": "workspace:*",
+    "@caerov/providers": "workspace:*",
+    "@caerov/shared": "workspace:*",
+    "@caerov/storage": "workspace:*",
+    "@caerov/workflow": "workspace:*",
+    "bullmq": "^5.58.5",
+    "dotenv": "^17.2.1",
+    "ioredis": "^5.7.0"
+  },
+  "devDependencies": {
+    "@caerov/tsconfig": "workspace:*",
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}

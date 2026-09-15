@@ -1,0 +1,46 @@
+{
+  "$schema": "./node_modules/turbo/schema.json",
+  "globalEnv": [
+    "NODE_ENV",
+    "API_PORT",
+    "WEB_URL",
+    "API_URL",
+    "NEXT_PUBLIC_API_URL",
+    "DATABASE_URL",
+    "REDIS_URL",
+    "S3_ENDPOINT",
+    "S3_REGION",
+    "S3_BUCKET",
+    "S3_ACCESS_KEY",
+    "S3_SECRET_KEY",
+    "S3_FORCE_PATH_STYLE",
+    "SESSION_SECRET",
+    "IMAGE_PROVIDER",
+    "VIDEO_PROVIDER",
+    "AUDIO_PROVIDER",
+    "IMAGE_PROVIDER_API_KEY",
+    "VIDEO_PROVIDER_API_KEY",
+    "AUDIO_PROVIDER_API_KEY"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"],
+      "outputs": [".turbo/tsconfig.tsbuildinfo"]
+    },
+    "test": {
+      "dependsOn": ["^test"],
+      "outputs": ["coverage/**"]
+    }
+  }
+}
